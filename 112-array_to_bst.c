@@ -10,24 +10,14 @@
 bst_t *array_to_bst(int *array, size_t size)
 {
 	bst_t *tree = NULL;
-	size_t i, j;
+	size_t index;
 
 	if (array == NULL)
 		return (NULL);
 
-	for (i = 0; i < size; i++)
+	for (index = 0; index < size; index++)
 	{
-		for (j = 0; j < i; j++)
-		{
-			if (array[j] == array[i])
-				break;
-		}
-		if (j == i)
-		{
-			if (bst_insert(&tree, array[i]) == NULL)
-				return (NULL);
-		}
+		if (bst_insert(&tree, array[index]);
 	}
-
 	return (tree);
 }
